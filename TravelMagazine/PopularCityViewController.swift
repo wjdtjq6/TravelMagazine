@@ -20,18 +20,6 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TravelInfo.travel.count
     }
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let normalCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! PopularCityTableViewCell
-//        let adCell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
-//        
-//        if TravelInfo.travel[indexPath.row].ad {
-//            return 50
-//        }
-//        else {
-//            return 120
-//        }
-//    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -40,10 +28,9 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
     let identifier = String(describing: PopularCityTableViewCell.self)
     //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let normalCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! PopularCityTableViewCell
-        let adCell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
-        
         if !TravelInfo.travel[indexPath.row].ad {
+            let normalCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! PopularCityTableViewCell
+            
             normalCell.titleLabel.text = TravelInfo.travel[indexPath.row].title
             normalCell.titleLabel.font = .boldSystemFont(ofSize: 18)
 
@@ -63,10 +50,12 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
             normalCell.uiImageView.kf.setImage(with: url)
             normalCell.uiImageView.contentMode = .scaleAspectFill
             normalCell.uiImageView.layer.cornerRadius = 10
-        
+            
             return normalCell
         }
         else {
+            let adCell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
+
             adCell.adLabel.text = "AD"
             adCell.adLabel.backgroundColor = .white
             adCell.adLabel.clipsToBounds = true
@@ -82,17 +71,17 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
             adCell.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
             return adCell
         }
-        
-        
-        //TravelInfo.travel[indexPath.row].like! ? cell.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal) : cell.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if TravelInfo.travel[indexPath.row].ad! {
-//            return 50
-//        }
-//        return 120
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if  TravelInfo.travel[indexPath.row].ad {
+            return 50
+        }
+        else {
+            return 120
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         popularCityTableView.delegate = self
@@ -102,14 +91,8 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
         let xib2 = UINib(nibName: "AdTableViewCell", bundle: nil)
         popularCityTableView.register(xib2, forCellReuseIdentifier: "AdTableViewCell")
         
-        popularCityTableView.rowHeight = 120
-        //popularCityTableView.rowHeight = UITableView.automaticDimension
-        
         titleLabel.text = "도시 상세 정보"
         titleLabel.font = .boldSystemFont(ofSize: 20)
         titleLabel.textAlignment = .center
     }
-    
-
-
 }
