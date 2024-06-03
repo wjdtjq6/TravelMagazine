@@ -138,7 +138,7 @@ class HotCityViewController: UIViewController, UITableViewDataSource, UITableVie
         let whiteSpace = searchBar.text!.trimmingCharacters(in: .whitespaces)
         
         for i in filterdCities {
-            if  i.city_name.contains(whiteSpace) || i.city_explain.contains(whiteSpace) || i.city_english_name.contains(whiteSpace) {
+            if  i.city_name.contains(whiteSpace) || i.city_explain.contains(whiteSpace) || i.city_english_name.lowercased().contains(whiteSpace.lowercased()) || i.city_english_name.uppercased().contains(whiteSpace.uppercased()) {
                 searchList.append(i)
             }
         }
