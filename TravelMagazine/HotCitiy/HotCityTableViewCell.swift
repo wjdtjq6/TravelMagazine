@@ -9,6 +9,8 @@ import UIKit
 
 class HotCityTableViewCell: UITableViewCell {
 
+    @IBOutlet var titleBetween: UILabel!
+    @IBOutlet var titleLabel2: UILabel!
     @IBOutlet var uiView: UIView!
     @IBOutlet var subLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!

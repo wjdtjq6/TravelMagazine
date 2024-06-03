@@ -24,19 +24,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="483" height="302"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnL-Jt-gcJ">
-                                <rect key="frame" x="0.0" y="0.0" width="483" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-pn-uhX">
+                                <rect key="frame" x="0.0" y="272" width="483" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4PJ-Yp-JVH"/>
+                                    <constraint firstAttribute="height" constant="30" id="01I-FD-dEm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-pn-uhX">
-                                <rect key="frame" x="0.0" y="272" width="483" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKt-bT-89b">
+                                <rect key="frame" x="425.66666666666669" y="0.0" width="41.333333333333314" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="01I-FD-dEm"/>
+                                    <constraint firstAttribute="height" constant="50" id="0ih-Qt-CxA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3X-R4-3kz">
+                                <rect key="frame" x="405.66666666666669" y="0.0" width="20" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="DJD-nw-S8Q"/>
+                                    <constraint firstAttribute="height" constant="50" id="WNi-Ho-bGe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnL-Jt-gcJ">
+                                <rect key="frame" x="364.33333333333331" y="0.0" width="41.333333333333314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4PJ-Yp-JVH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -48,13 +67,17 @@
                             <constraint firstAttribute="bottom" secondItem="Fhc-Af-USe" secondAttribute="bottom" id="4nv-HX-PfV"/>
                             <constraint firstAttribute="trailing" secondItem="Fhc-Af-USe" secondAttribute="trailing" id="6hR-Yu-rSr"/>
                             <constraint firstItem="Fhc-Af-USe" firstAttribute="leading" secondItem="sjx-GX-NbP" secondAttribute="leading" id="7ow-4b-rvc"/>
+                            <constraint firstItem="E3X-R4-3kz" firstAttribute="top" secondItem="sjx-GX-NbP" secondAttribute="top" id="87X-uw-ckE"/>
                             <constraint firstAttribute="bottom" secondItem="AAQ-pn-uhX" secondAttribute="bottom" id="9pj-Re-fIG"/>
-                            <constraint firstAttribute="trailing" secondItem="lnL-Jt-gcJ" secondAttribute="trailing" id="AYz-MG-7KF"/>
                             <constraint firstItem="Fhc-Af-USe" firstAttribute="top" secondItem="sjx-GX-NbP" secondAttribute="top" id="Abc-le-XUJ"/>
-                            <constraint firstItem="lnL-Jt-gcJ" firstAttribute="leading" secondItem="sjx-GX-NbP" secondAttribute="leading" id="QU4-q6-ver"/>
+                            <constraint firstItem="oKt-bT-89b" firstAttribute="top" secondItem="sjx-GX-NbP" secondAttribute="top" id="E0H-fi-PZX"/>
+                            <constraint firstItem="E3X-R4-3kz" firstAttribute="leading" secondItem="lnL-Jt-gcJ" secondAttribute="trailing" id="bQg-FS-8uV"/>
                             <constraint firstItem="AAQ-pn-uhX" firstAttribute="leading" secondItem="sjx-GX-NbP" secondAttribute="leading" id="dAx-TK-oVe"/>
+                            <constraint firstAttribute="trailing" secondItem="oKt-bT-89b" secondAttribute="trailing" constant="16" id="iZU-kX-rEc"/>
+                            <constraint firstItem="lnL-Jt-gcJ" firstAttribute="top" secondItem="sjx-GX-NbP" secondAttribute="top" id="jRL-BS-rYF"/>
                             <constraint firstItem="lnL-Jt-gcJ" firstAttribute="top" secondItem="sjx-GX-NbP" secondAttribute="top" id="pDc-zp-wGO"/>
                             <constraint firstAttribute="trailing" secondItem="AAQ-pn-uhX" secondAttribute="trailing" id="q3a-jW-Df6"/>
+                            <constraint firstItem="oKt-bT-89b" firstAttribute="leading" secondItem="E3X-R4-3kz" secondAttribute="trailing" id="yVb-Yy-wHu"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,7 +92,9 @@
             <connections>
                 <outlet property="cityImageView" destination="Fhc-Af-USe" id="e7P-et-Ytr"/>
                 <outlet property="subLabel" destination="AAQ-pn-uhX" id="BYI-Ho-xou"/>
+                <outlet property="titleBetween" destination="E3X-R4-3kz" id="58z-je-sL6"/>
                 <outlet property="titleLabel" destination="lnL-Jt-gcJ" id="ocV-g1-K0c"/>
+                <outlet property="titleLabel2" destination="oKt-bT-89b" id="gcw-Tk-miP"/>
                 <outlet property="uiView" destination="sjx-GX-NbP" id="opA-Zi-HXY"/>
             </connections>
             <point key="canvasLocation" x="-11.450381679389313" y="121.83098591549296"/>
