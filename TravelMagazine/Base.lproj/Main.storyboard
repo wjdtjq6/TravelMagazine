@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="138" y="4"/>
         </scene>
-        <!--Item-->
+        <!--SeSac Travel-->
         <scene sceneID="SqC-Au-qeK">
             <objects>
                 <tableViewController id="tww-eV-dtO" customClass="TravelMagazineTableViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,16 +122,16 @@
                             <outlet property="delegate" destination="tww-eV-dtO" id="84a-HV-wgB"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Zle-p1-bh9"/>
+                    <tabBarItem key="tabBarItem" title="SeSac Travel" id="Zle-p1-bh9"/>
                     <connections>
                         <outlet property="titleLabel" destination="yNR-hj-CKE" id="hxO-Ie-FAP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gou-LI-bY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="761"/>
+            <point key="canvasLocation" x="1844" y="29"/>
         </scene>
-        <!--Item 2-->
+        <!--Popular City View Controller-->
         <scene sceneID="iu3-NG-0Qg">
             <objects>
                 <viewController id="t1D-BZ-ZIY" customClass="PopularCityViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
@@ -155,7 +155,7 @@
                         <viewLayoutGuide key="safeArea" id="l4W-c9-FY6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="a2H-9Y-3Vg"/>
+                    <navigationItem key="navigationItem" id="8tB-qu-9WD"/>
                     <connections>
                         <outlet property="popularCityTableView" destination="w4l-gO-joX" id="vtX-Pl-vtT"/>
                         <outlet property="titleLabel" destination="y3e-hx-uw7" id="Jza-iR-H2M"/>
@@ -163,23 +163,150 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pq1-i6-cXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1843.5114503816794" y="-665.49295774647885"/>
+            <point key="canvasLocation" x="2770.2290076335876" y="-665.49295774647885"/>
         </scene>
-        <!--Item 1-->
+        <!--Ad Detail View Controller-->
+        <scene sceneID="M6S-o8-FkG">
+            <objects>
+                <viewController storyboardIdentifier="AdDetailViewController" id="li6-bM-YIJ" customClass="AdDetailViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MUU-fK-I2l">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2t-eE-ktw">
+                                <rect key="frame" x="46.666666666666657" y="376" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aHG-OO-tmp"/>
+                                    <constraint firstAttribute="width" constant="300" id="qAs-ut-IRY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hvq-U7-Os2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X2t-eE-ktw" firstAttribute="centerY" secondItem="MUU-fK-I2l" secondAttribute="centerY" id="FMf-l9-jib"/>
+                            <constraint firstItem="X2t-eE-ktw" firstAttribute="centerX" secondItem="MUU-fK-I2l" secondAttribute="centerX" id="b1j-gw-x5d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q5C-EV-YZi"/>
+                    <connections>
+                        <outlet property="adTitleLabel" destination="X2t-eE-ktw" id="7sj-cX-mmO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpZ-GS-Y1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3526" y="-265"/>
+        </scene>
+        <!--Tour Detail View Controller-->
+        <scene sceneID="Igy-ea-66f">
+            <objects>
+                <viewController storyboardIdentifier="TourDetailViewController" id="vJi-5f-w5f" customClass="TourDetailViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wu2-lP-hYy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQE-gV-mZh">
+                                <rect key="frame" x="46.666666666666657" y="376" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FfG-10-VAb"/>
+                                    <constraint firstAttribute="height" constant="100" id="wsZ-aS-Exe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CpJ-5g-IJN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aQE-gV-mZh" firstAttribute="centerX" secondItem="wu2-lP-hYy" secondAttribute="centerX" id="0Ta-cV-Z0w"/>
+                            <constraint firstItem="aQE-gV-mZh" firstAttribute="centerY" secondItem="wu2-lP-hYy" secondAttribute="centerY" id="Xfa-k0-X2Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nXu-Dp-hnc"/>
+                    <connections>
+                        <outlet property="tourTitleLabel" destination="aQE-gV-mZh" id="Av0-Bw-69R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Es0-bc-emM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3526" y="-939"/>
+        </scene>
+        <!--Hot City View Controller-->
         <scene sceneID="0cN-4u-mxQ">
             <objects>
-                <viewController id="maG-Ed-3SW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HotCityViewController" id="maG-Ed-3SW" customClass="HotCityViewController" customModule="TravelMagazine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxC-nQ-IBf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OoO-N6-iA8">
+                                <rect key="frame" x="0.0" y="213" width="393" height="556"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8Y-wY-jxR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="110"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hTo-1c-X14">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Z8L-m8-SQF"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="maG-Ed-3SW" id="YwT-v4-Zj8"/>
+                                        </connections>
+                                    </searchBar>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A7c-iz-PWp">
+                                        <rect key="frame" x="16" y="60" width="361" height="35"/>
+                                        <segments>
+                                            <segment title="first"/>
+                                            <segment title="Second"/>
+                                            <segment title=""/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentControl:" destination="maG-Ed-3SW" eventType="valueChanged" id="Uoc-fy-BcX"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hTo-1c-X14" secondAttribute="trailing" id="2dj-Qs-7gk"/>
+                                    <constraint firstItem="hTo-1c-X14" firstAttribute="leading" secondItem="b8Y-wY-jxR" secondAttribute="leading" id="5HV-Ta-yU3"/>
+                                    <constraint firstAttribute="height" constant="110" id="LF1-Y6-VEI"/>
+                                    <constraint firstItem="A7c-iz-PWp" firstAttribute="leading" secondItem="b8Y-wY-jxR" secondAttribute="leading" constant="16" id="O1w-Lb-5Lf"/>
+                                    <constraint firstAttribute="trailing" secondItem="A7c-iz-PWp" secondAttribute="trailing" constant="16" id="f7k-Qo-MBN"/>
+                                    <constraint firstItem="hTo-1c-X14" firstAttribute="top" secondItem="b8Y-wY-jxR" secondAttribute="top" id="mVN-Gy-aup"/>
+                                    <constraint firstAttribute="bottom" secondItem="A7c-iz-PWp" secondAttribute="bottom" constant="16" id="n0S-7c-aFT"/>
+                                    <constraint firstItem="A7c-iz-PWp" firstAttribute="top" secondItem="hTo-1c-X14" secondAttribute="bottom" constant="16" id="wll-8F-MZD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wL4-CG-0bd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OoO-N6-iA8" firstAttribute="top" secondItem="b8Y-wY-jxR" secondAttribute="bottom" id="HfJ-HI-TJk"/>
+                            <constraint firstItem="OoO-N6-iA8" firstAttribute="leading" secondItem="wL4-CG-0bd" secondAttribute="leading" id="Iwk-aq-saq"/>
+                            <constraint firstItem="OoO-N6-iA8" firstAttribute="bottom" secondItem="wL4-CG-0bd" secondAttribute="bottom" id="Vf4-Np-yK3"/>
+                            <constraint firstItem="OoO-N6-iA8" firstAttribute="trailing" secondItem="wL4-CG-0bd" secondAttribute="trailing" id="br5-pS-5Ms"/>
+                            <constraint firstItem="b8Y-wY-jxR" firstAttribute="trailing" secondItem="wL4-CG-0bd" secondAttribute="trailing" id="dqd-Ey-qan"/>
+                            <constraint firstItem="b8Y-wY-jxR" firstAttribute="top" secondItem="wL4-CG-0bd" secondAttribute="top" id="g12-wI-cw7"/>
+                            <constraint firstItem="b8Y-wY-jxR" firstAttribute="leading" secondItem="wL4-CG-0bd" secondAttribute="leading" id="ktm-o9-yHL"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="kkD-Y7-QI1"/>
+                    <navigationItem key="navigationItem" id="3CV-Ys-V9X"/>
+                    <connections>
+                        <outlet property="searchBar" destination="hTo-1c-X14" id="CcL-IT-bYx"/>
+                        <outlet property="tableView" destination="OoO-N6-iA8" id="KmI-CL-ZgA"/>
+                        <outlet property="uiSegmentedControl" destination="A7c-iz-PWp" id="mf6-6a-Tso"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qO6-g9-wPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="29"/>
+            <point key="canvasLocation" x="2770.2290076335876" y="764.78873239436621"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nB9-m5-atx">
@@ -191,14 +318,52 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="t1D-BZ-ZIY" kind="relationship" relationship="viewControllers" id="Mt8-7d-VHe"/>
+                        <segue destination="rhS-Ai-3Au" kind="relationship" relationship="viewControllers" id="Mt8-7d-VHe"/>
                         <segue destination="tww-eV-dtO" kind="relationship" relationship="viewControllers" id="fGC-E9-TiP"/>
-                        <segue destination="maG-Ed-3SW" kind="relationship" relationship="viewControllers" id="jUJ-Wf-2IT"/>
+                        <segue destination="6VO-Td-Kzb" kind="relationship" relationship="viewControllers" id="jUJ-Wf-2IT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7A-V7-VSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938" y="29"/>
+        </scene>
+        <!--도시 상세 정보-->
+        <scene sceneID="XbC-nn-TuI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rhS-Ai-3Au" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="도시 상세 정보" id="a2H-9Y-3Vg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yz4-eu-HXG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="t1D-BZ-ZIY" kind="relationship" relationship="rootViewController" id="tXO-KR-1Zw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUs-uy-JWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843.5114503816794" y="-665.49295774647885"/>
+        </scene>
+        <!--여행 국가 탐색 화면-->
+        <scene sceneID="grt-ON-hCk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VO-Td-Kzb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="여행 국가 탐색 화면" id="kkD-Y7-QI1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M1r-rJ-wct">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="maG-Ed-3SW" kind="relationship" relationship="rootViewController" id="OgG-NC-mEs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1D0-Ww-wEn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843.5114503816794" y="764.78873239436621"/>
         </scene>
     </scenes>
     <resources>

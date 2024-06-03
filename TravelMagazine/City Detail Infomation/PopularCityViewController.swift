@@ -14,7 +14,10 @@ import Kingfisher
  4.XIB Cell: 여러 테이블에 재사용
  5.XIB register 해야함
  */
-class PopularCityViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+
+//storyboard?.으로 써야하는 이유 강의자료에서 찾기 -> UIStoryboard()는 새로운 스토리보드 인스턴스를 생성, storyboard?는 현재 뷰 컨트롤러가 있는 스토리보드를 참조
+
+class PopularCityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var popularCityTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,7 +70,7 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
             adCell.titleLabel.numberOfLines = 0
             adCell.titleLabel.font = .boldSystemFont(ofSize: 17)
             
-            adCell.layer.cornerRadius = 30
+            adCell.layer.cornerRadius = 20
             adCell.backgroundColor = UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1.0)
             return adCell
         }
@@ -81,7 +84,33 @@ class PopularCityViewController: UIViewController,UITableViewDelegate, UITableVi
             return 120
         }
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if TravelInfo.travel[indexPath.row].ad {
+            //광고화면
+           
+            //2.스토리보드 내 전환하고자 하는 화면 가져오기
+            let vc = /*self.*/storyboard?.instantiateViewController(identifier: "AdDetailViewController") as! AdDetailViewController
+            //2.1. 네비게이션 컨트롤러가 있는 형태(제목바)로 Present하고 싶은 경우
+            //nav를 사용한다면, present와 화면 전환 방식도 nav로 수정해주어야함
+            let nav = UINavigationController(rootViewController: vc)
+            
+            //3.화면 띄우기
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true)
+        }
+        else {
+            //관광지 화면 터치하면 반응은 있음 navi부분이 문제인듯! => 인터페이스 빌더에 네비게이션 컨트롤러가 임베드되어 있어야만 Push가 동작
+            
+            //2.스토리보드 내 전환하고자 하는 화면 가져오기
+            let vc = storyboard?.instantiateViewController(identifier: "TourDetailViewController") as! TourDetailViewController
+            //let nav = UINavigationController(rootViewController: vc)
+            
+            //3.화면 띄우기
+            //nav.modalPresentationStyle = .fullScreen
+            navigationController?.pushViewController(vc, animated: true)
+            //present(nav, animated: true)
+        }
+    }//push는 옆에서 나오는거:
     override func viewDidLoad() {
         super.viewDidLoad()
         popularCityTableView.delegate = self
